@@ -15,8 +15,8 @@ public class MatrixMath
      */
     public MatrixMath(int[][] data)
     {
+         
         // initialise instance variables
-       
     }
 
     /**
@@ -27,6 +27,11 @@ public class MatrixMath
      */
     public int[] rowSum()
     {
+        int sum = 0;
+        
+        for(int i = 0; i<data[0].length; i++){
+            
+        }
         return null;
     }
     
