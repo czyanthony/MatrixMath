@@ -15,7 +15,7 @@ public class MatrixMath
      */
     public MatrixMath(int[][] data)
     {
-         
+         this.data = data;
         // initialise instance variables
     }
 
@@ -27,12 +27,19 @@ public class MatrixMath
      */
     public int[] rowSum()
     {
-        int sum = 0;
+        int[] sumRow = new int[data.length];
         
-        for(int i = 0; i<data[0].length; i++){
-            
+        
+        
+        
+        for(int i = 0; i<data.length; i++){
+            int sum = 0;
+            for (int j = 0; j<data[i].length; j++){
+                sum+=data[i][j];
+            }
+            sumRow[i] = sum;
         }
-        return null;
+        return sumRow;
     }
     
         /**
@@ -42,7 +49,18 @@ public class MatrixMath
      */
     public double[] rowAve()
     {
-        return null;
+        double[] aveRow = new double[data.length];
+        
+        for (int i = 0; i<data.length; i++){
+            double sum = 0;
+            for(int j = 0; j<data[i].length; j++){
+                sum += data[i][j];
+                
+            }
+            aveRow[i] = sum/(data[0].length);
+        }
+        
+        return aveRow;
     }
     
         /**
@@ -53,7 +71,16 @@ public class MatrixMath
      */
     public int[] colSum()
     {
-        return null;
+        int column = data[0].length;
+        int[] sumCol = new int [column];
+        for (int i = 0; i<column; i++){
+            int sum = 0;
+            for (int j = 0; j<data.length; j++){
+                sum+=data[j][i];
+            }
+            sumCol[i] = sum;
+        }
+        return sumCol;
     }
     
      /**
@@ -63,7 +90,17 @@ public class MatrixMath
      */
     public double[] colAve()
     {
-        return null;
+        int column = data[0].length;
+        double[] aveCol = new double [column];
+        for (int i = 0; i<column; i++){
+            double sum = 0;
+            for (int j = 0; j<data.length; j++){
+                
+                sum+=data[j][i];
+            }
+            aveCol[i] = sum/column;
+        }
+        return aveCol;
     }
     
 }
