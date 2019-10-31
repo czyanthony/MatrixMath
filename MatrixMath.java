@@ -98,7 +98,7 @@ public class MatrixMath
                 
                 sum+=data[j][i];
             }
-            aveCol[i] = sum/column;
+            aveCol[i] = sum/data.length;
         }
         return aveCol;
     }
